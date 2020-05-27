@@ -7,3 +7,12 @@ html {
 *::after {
   box-sizing: inherit;
 }
+
+.search-form {
+  margin-bottom: 20px;
+}
+
+.buttonMore {
+  display: block;
+  margin: 0 auto;
+}
