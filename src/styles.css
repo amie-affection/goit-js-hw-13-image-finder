@@ -13,8 +13,8 @@ html {
 }
 
 .buttonMore {
-  display: block;
-  margin: 0 auto;
+  top: 95vh;
+  position: fixed;
 }
 
 .gallery {

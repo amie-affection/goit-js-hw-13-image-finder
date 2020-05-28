@@ -8,16 +8,21 @@ const loadMoreBtn = document.querySelector('.buttonMore');
 
 loadMoreBtn.addEventListener('click', () => {
   api.getImage().then(res => createCardItem(res));
+
+  window.scrollTo({
+    top: document.documentElement.offsetHeight,
+    behavior: 'smooth',
+  });
 });
 
 form.addEventListener('submit', e => {
   e.preventDefault();
   // console.log(form.elements.query.value);
   const value = form.elements.query.value;
-    api.query = value;
-    gallery.innerHTML = '';
-    api.getImage().then(res => createCardItem(res));
-    form.reset();
+  api.query = value;
+  gallery.innerHTML = '';
+  api.getImage().then(res => createCardItem(res));
+  form.reset();
 });
 // console.log(form);
 
