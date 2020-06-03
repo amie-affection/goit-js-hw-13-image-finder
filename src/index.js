@@ -20,6 +20,7 @@ form.addEventListener('submit', e => {
   // console.log(form.elements.query.value);
   const value = form.elements.query.value;
   api.query = value;
+  api.reset();
   gallery.innerHTML = '';
   api.getImage().then(res => createCardItem(res));
   form.reset();

@@ -12,6 +12,9 @@ const api = {
     this.page += 1;
     return res.data.hits;
   },
+  reset() {
+    this.page = 1;
+  },
 };
 
 export default api;
